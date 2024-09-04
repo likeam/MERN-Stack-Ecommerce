@@ -6,6 +6,9 @@ import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
+import bannerwomens from "./assets/bannerwomens.png";
+import bannermens from "./assets/bannermens.png";
+import bannerkids from "./assets/bannerkids.png";
 
 export default function App() {
   return (
@@ -14,17 +17,26 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/mens" element={<Category />} />
-          <Route path="/womens" element={<Category />} />
-          <Route path="/kids" element={<Category />} />
-          <Route path="/product" element={<Product />} >
+          <Route
+            path="/mens"
+            element={<Category category="men" banner={bannermens} />}
+          />
+          <Route
+            path="/womens"
+            element={<Category category="women" banner={bannerwomens} />}
+          />
+          <Route
+            path="/kids"
+            element={<Category category="kid" banner={bannerkids} />}
+          />
+          <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>
-          <Route path="/cart" element={<Cart /> } />
-          <Route path="/login" element={<Login /> } />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>
     </main>
-  )
+  );
 }
