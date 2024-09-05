@@ -23,14 +23,15 @@ const Login = () => {
         <button className=" btn_dark_rounded my-14 w-full !rounded-md">
           Continue
         </button>
-        <p className="">
-          Already have an account? <span className="">Login</span>
+        <p className=" text-black font-bold">
+          Already have an account?{" "}
+          <span className=" text-secondary underline cursor-pointer">
+            Login
+          </span>
         </p>
-        <div className="">
+        <div className="flexCenter mt-6 gap-3">
           <input type="checkbox" className="" name="" id="" />
-          <p className="">
-            By continuing, i agree to the terms of use & privacy policy.
-          </p>
+          <p>By continuing, i agree to the terms of use & privacy policy.</p>
         </div>
       </div>
     </section>
