@@ -20,7 +20,7 @@ const Category = ({ category, banner }) => {
         {/* Container */}
         <div className=" grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-6">
           {all_products.map((item) => {
-            if (category === item.category) {
+            if (category == item.category) {
               return (
                 <Item
                   key={item.id}

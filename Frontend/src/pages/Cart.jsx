@@ -1,9 +1,9 @@
-
+import { useContext } from "react";
+import ShopContextProvider from "../Context/ShopContext";
+import CartItems from "../components/CartItems";
 
 const Cart = () => {
-  return (
-    <div>Cart</div>
-  )
-}
+  return <CartItems />;
+};
 
-export default Cart
+export default Cart;
